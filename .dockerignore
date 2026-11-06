@@ -1,0 +1,34 @@
+# ── Build output (Windows obj/ would clash with the restore inside the image) ──
+**/bin/
+**/obj/
+**/out/
+**/publish/
+**/artifacts/
+
+# ── Tests / coverage output ───────────────────────────────────
+**/TestResults/
+**/*.trx
+**/coverage*
+
+# ── VCS / IDE ─────────────────────────────────────────────────
+.git/
+.gitignore
+.vs/
+.vscode/
+.idea/
+**/*.user
+**/*.suo
+
+# ── Docker files themselves ───────────────────────────────────
+Dockerfile
+.dockerignore
+
+# ── Docs / local config / logs ────────────────────────────────
+plans/
+**/*.md
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/*.local.json
+**/.env
+**/.env.*
+**/*.log

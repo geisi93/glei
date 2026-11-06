@@ -1,0 +1,19 @@
+@TriasDeparture.Api_HostAddress = http://localhost:5161
+
+GET {{TriasDeparture.Api_HostAddress}}/api/stops/search?query=krenngasse
+Accept: application/json
+
+###
+
+# Replace with an id returned by the stop search
+@stopId = at:46:4235
+
+GET {{TriasDeparture.Api_HostAddress}}/api/departures/{{stopId}}
+Accept: application/json
+
+###
+
+GET {{TriasDeparture.Api_HostAddress}}/api/departures/{{stopId}}/line/3
+Accept: application/json
+
+###

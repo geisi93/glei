@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TriasDeparture.Api/TriasDeparture.Api.csproj" />
+    <Project Path="src/TriasDeparture.Application/TriasDeparture.Application.csproj" />
+    <Project Path="src/TriasDeparture.Domain/TriasDeparture.Domain.csproj" />
+    <Project Path="src/TriasDeparture.Infrastructure/TriasDeparture.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TriasDeparture.Tests/TriasDeparture.Tests.csproj" />
+  </Folder>
+</Solution>
