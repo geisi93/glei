@@ -5,6 +5,11 @@
     <Project Path="core/TriasDeparture.Infrastructure/TriasDeparture.Infrastructure.csproj" />
     <Project Path="core/TriasDeparture.Tests/TriasDeparture.Tests.csproj" />
   </Folder>
+  <Folder Name="/alexa/">
+    <Project Path="alexa/tools/TriasDeparture.Alexa.ModelGenerator/TriasDeparture.Alexa.ModelGenerator.csproj" />
+    <Project Path="alexa/TriasDeparture.Alexa.Tests/TriasDeparture.Alexa.Tests.csproj" />
+    <Project Path="alexa/TriasDeparture.Alexa/TriasDeparture.Alexa.csproj" />
+  </Folder>
   <Folder Name="/api/">
     <Project Path="api/TriasDeparture.Api/TriasDeparture.Api.csproj" />
   </Folder>
