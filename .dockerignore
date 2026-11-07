@@ -20,11 +20,11 @@
 **/*.suo
 
 # ── Docker files themselves ───────────────────────────────────
-Dockerfile
+# The build context is the repo root; each Dockerfile copies only the folders it needs.
+**/Dockerfile
 .dockerignore
 
 # ── Docs / local config / logs ────────────────────────────────
-plans/
 **/*.md
 **/appsettings.Development.json
 **/appsettings.Local.json

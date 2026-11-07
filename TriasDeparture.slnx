@@ -1,11 +1,11 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/TriasDeparture.Api/TriasDeparture.Api.csproj" />
-    <Project Path="src/TriasDeparture.Application/TriasDeparture.Application.csproj" />
-    <Project Path="src/TriasDeparture.Domain/TriasDeparture.Domain.csproj" />
-    <Project Path="src/TriasDeparture.Infrastructure/TriasDeparture.Infrastructure.csproj" />
+  <Folder Name="/core/">
+    <Project Path="core/TriasDeparture.Application/TriasDeparture.Application.csproj" />
+    <Project Path="core/TriasDeparture.Domain/TriasDeparture.Domain.csproj" />
+    <Project Path="core/TriasDeparture.Infrastructure/TriasDeparture.Infrastructure.csproj" />
+    <Project Path="core/TriasDeparture.Tests/TriasDeparture.Tests.csproj" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/TriasDeparture.Tests/TriasDeparture.Tests.csproj" />
+  <Folder Name="/api/">
+    <Project Path="api/TriasDeparture.Api/TriasDeparture.Api.csproj" />
   </Folder>
 </Solution>

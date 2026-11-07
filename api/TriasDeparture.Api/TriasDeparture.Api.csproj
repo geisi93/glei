@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TriasDeparture.Application\TriasDeparture.Application.csproj" />
-    <ProjectReference Include="..\TriasDeparture.Infrastructure\TriasDeparture.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\core\TriasDeparture.Application\TriasDeparture.Application.csproj" />
+    <ProjectReference Include="..\..\core\TriasDeparture.Infrastructure\TriasDeparture.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

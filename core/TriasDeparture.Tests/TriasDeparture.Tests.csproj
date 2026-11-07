@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TriasDeparture.Domain\TriasDeparture.Domain.csproj" />
-    <ProjectReference Include="..\..\src\TriasDeparture.Application\TriasDeparture.Application.csproj" />
-    <ProjectReference Include="..\..\src\TriasDeparture.Infrastructure\TriasDeparture.Infrastructure.csproj" />
+    <ProjectReference Include="..\TriasDeparture.Domain\TriasDeparture.Domain.csproj" />
+    <ProjectReference Include="..\TriasDeparture.Application\TriasDeparture.Application.csproj" />
+    <ProjectReference Include="..\TriasDeparture.Infrastructure\TriasDeparture.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
