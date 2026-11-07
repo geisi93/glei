@@ -111,7 +111,23 @@ public sealed class TriasXmlParser
                          || string.Equals(thisCall.Element(Ns + "NotServicedStop")?.Value, "true",
                                           StringComparison.OrdinalIgnoreCase);
 
-            var departure = new DepartureDto(lineName, destination, 0, plannedTime, estimatedTime, mode, cancelled);
+            // "outward" / "inward" – separates the two directions of a line
+            var direction = section?.Element(Ns + "DirectionRef")?.Value;
+            if (string.IsNullOrWhiteSpace(direction))
+                direction = null;
+
+            // Only present when the request asked for IncludeOnwardCalls
+            var onwardCalls = stopEvent.Elements(Ns + "OnwardCall").ToList();
+            IReadOnlyList<string>? onwardStops = onwardCalls.Count == 0
+                ? null
+                : onwardCalls
+                    .Select(c => Text(c.Element(Ns + "CallAtStop")?.Element(Ns + "StopPointName")))
+                    .OfType<string>()
+                    .ToList()
+                    .AsReadOnly();
+
+            var departure = new DepartureDto(
+                lineName, destination, 0, plannedTime, estimatedTime, mode, cancelled, direction, onwardStops);
             results.Add(departure with { Minutes = departure.MinutesUntilDeparture(nowUtc) });
         }
 

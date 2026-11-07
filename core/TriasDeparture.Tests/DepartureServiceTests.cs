@@ -16,7 +16,7 @@ public sealed class DepartureServiceTests
         public Task<IReadOnlyList<StopDto>> SearchStopsAsync(string query, CancellationToken ct = default)
             => Task.FromResult<IReadOnlyList<StopDto>>([]);
 
-        public Task<IReadOnlyList<DepartureDto>> GetDeparturesAsync(string stopId, CancellationToken ct = default)
+        public Task<IReadOnlyList<DepartureDto>> GetDeparturesAsync(string stopId, bool includeOnwardStops = false, CancellationToken ct = default)
             => Task.FromResult<IReadOnlyList<DepartureDto>>(Departures.GetValueOrDefault(stopId, []));
     }
 

@@ -53,10 +53,13 @@ public sealed class TriasXmlBuilder
         BuildStopEventRequest(stopId, DateTime.UtcNow, numberOfResults);
 
     /// <summary>Builds a StopEventRequest XML for live departures from <paramref name="departureTimeUtc"/> on.</summary>
-    public string BuildStopEventRequest(string stopId, DateTime departureTimeUtc, int numberOfResults = 20)
+    /// <param name="includeOnwardCalls">Also return the stops each trip calls at afterwards (much larger response).</param>
+    public string BuildStopEventRequest(
+        string stopId, DateTime departureTimeUtc, int numberOfResults = 20, bool includeOnwardCalls = false)
     {
         var timestamp = Format(DateTime.UtcNow);
         var depTime   = Format(departureTimeUtc);
+        var onward    = includeOnwardCalls ? "true" : "false";
         return $"""
 <?xml version="1.0" encoding="UTF-8"?>
 <Trias version="1.2" xmlns="{TriasNs}" xmlns:siri="{SiriNs}">
@@ -75,6 +78,7 @@ public sealed class TriasXmlBuilder
                     <NumberOfResults>{numberOfResults}</NumberOfResults>
                     <StopEventType>departure</StopEventType>
                     <IncludeRealtimeData>true</IncludeRealtimeData>
+                    <IncludeOnwardCalls>{onward}</IncludeOnwardCalls>
                 </Params>
             </StopEventRequest>
         </RequestPayload>

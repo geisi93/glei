@@ -8,6 +8,7 @@ Live-Abfahrten für Bus und Bim in der Steiermark („Der 3er kommt glei.“) au
 |--------|--------|
 | [`core/`](core) | Gemeinsamer TRIAS-Code: Modelle, Services, TRIAS-Client (XML-Builder/-Parser, Caching) + Tests |
 | [`api/`](api) | REST API – [Doku](api/README.md) |
+| [`alexa/`](alexa) | Alexa-Skill („Alexa, frag glei …“) – [Einrichtung](alexa/README.md) |
 
 ```
 api/TriasDeparture.Api            (Controller, Program.cs, Swagger)
