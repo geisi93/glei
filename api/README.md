@@ -10,7 +10,7 @@ Schlanke ASP.NET Core 10 Web API als Fassade vor der [TRIAS-Schnittstelle](https
 | GET | `/api/departures/{stopId}` | Alle Abfahrten einer Haltestelle |
 | GET | `/api/departures/{stopId}/line/{line}` | Abfahrten gefiltert nach Linie |
 
-Beispiel-Abfahrt (alle Zeiten in UTC, `minutes` wird bei jedem Aufruf neu berechnet):
+Beispiel-Abfahrt (alle Zeiten in UTC, `minutes` wird bei jedem Aufruf neu berechnet; `direction` ist `outward` oder `inward` und trennt die zwei Richtungen einer Linie):
 
 ```json
 {
@@ -20,7 +20,8 @@ Beispiel-Abfahrt (alle Zeiten in UTC, `minutes` wird bei jedem Aufruf neu berech
   "plannedTime": "2026-10-07T16:05:00Z",
   "estimatedTime": "2026-10-07T16:06:00Z",
   "mode": "tram",
-  "cancelled": false
+  "cancelled": false,
+  "direction": "outward"
 }
 ```
 

@@ -108,8 +108,12 @@ public sealed class TriasXmlParserTests
     // ──────────────────────────────────────────────────────────────────────────
     private static string StopEvent(
         string plannedTime, string? estimatedTime = null,
-        string line = "3", string mode = "tram", bool cancelled = false)
+        string line = "3", string mode = "tram", bool cancelled = false,
+        string? direction = null, params string[] onwardStops)
     {
+        var directionElement = direction is not null ? $"<DirectionRef>{direction}</DirectionRef>" : string.Empty;
+        var onwardElements = string.Concat(onwardStops.Select(s =>
+            $"<OnwardCall><CallAtStop><StopPointName><Text>{s}</Text></StopPointName></CallAtStop></OnwardCall>"));
         var estElement = estimatedTime is not null
             ? $"<EstimatedTime>{estimatedTime}</EstimatedTime>"
             : string.Empty;
@@ -126,9 +130,11 @@ public sealed class TriasXmlParserTests
                 </ServiceDeparture>
               </CallAtStop>
             </ThisCall>
+            {onwardElements}
             <Service>
               <ServiceSection>
                 <LineRef>stv:33003::R</LineRef>
+                {directionElement}
                 <Mode><PtMode>{mode}</PtMode></Mode>
                 <PublishedLineName><Text>{line}</Text></PublishedLineName>
               </ServiceSection>
@@ -221,6 +227,32 @@ public sealed class TriasXmlParserTests
         var xml = StopEventXml(StopEvent("not-a-date"), StopEvent("2026-10-07T12:05:00Z"));
 
         _parser.ParseDepartures(xml, Now).Count.ShouldBe(1);
+    }
+
+    [Fact]
+    public void ParseDepartures_ReadsDirection()
+    {
+        var xml = StopEventXml(
+            StopEvent("2026-10-07T12:05:00Z", direction: "outward"),
+            StopEvent("2026-10-07T12:06:00Z"));
+
+        var departures = _parser.ParseDepartures(xml, Now);
+
+        departures[0].Direction.ShouldBe("outward");
+        departures[1].Direction.ShouldBeNull();
+    }
+
+    [Fact]
+    public void ParseDepartures_ReadsOnwardStops_OnlyWhenPresent()
+    {
+        var xml = StopEventXml(
+            StopEvent("2026-10-07T12:05:00Z", direction: "inward", onwardStops: ["Alte Poststraße", "Hauptbahnhof"]),
+            StopEvent("2026-10-07T12:06:00Z"));
+
+        var departures = _parser.ParseDepartures(xml, Now);
+
+        departures[0].OnwardStops.ShouldBe(["Alte Poststraße", "Hauptbahnhof"]);
+        departures[1].OnwardStops.ShouldBeNull();
     }
 
     [Fact]

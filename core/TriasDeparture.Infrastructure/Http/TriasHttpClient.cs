@@ -15,7 +15,7 @@ namespace TriasDeparture.Infrastructure.Http;
 /// Sends TRIAS requests via HTTP and caches the results in memory.
 /// Cache TTLs:
 ///   stops:{query}        → 24 h
-///   departures:{stopId}  → 15 s
+///   departures:{stopId}[:onward]  → 15 s
 /// </summary>
 public sealed class TriasHttpClient : ITriasClient
 {
@@ -74,15 +74,17 @@ public sealed class TriasHttpClient : ITriasClient
         return stops;
     }
 
-    public async Task<IReadOnlyList<DepartureDto>> GetDeparturesAsync(string stopId, CancellationToken ct = default)
+    public async Task<IReadOnlyList<DepartureDto>> GetDeparturesAsync(
+        string stopId, bool includeOnwardStops = false, CancellationToken ct = default)
     {
-        var cacheKey = $"departures:{stopId}";
+        var cacheKey = includeOnwardStops ? $"departures:{stopId}:onward" : $"departures:{stopId}";
 
         if (!_cache.TryGetValue(cacheKey, out IReadOnlyList<DepartureDto>? departures) || departures is null)
         {
             _logger.LogDebug("Cache MISS [{Key}]", cacheKey);
 
-            var xml      = _builder.BuildStopEventRequest(stopId, _time.GetUtcNow().UtcDateTime, DepartureResults);
+            var xml      = _builder.BuildStopEventRequest(
+                stopId, _time.GetUtcNow().UtcDateTime, DepartureResults, includeOnwardStops);
             var response = await PostAsync(xml, ct);
             departures   = _parser.ParseDepartures(response, _time.GetUtcNow().UtcDateTime);
 

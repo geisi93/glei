@@ -56,6 +56,22 @@ public sealed class TriasXmlBuilderTests
     }
 
     [Fact]
+    public void BuildStopEventRequest_OnwardCalls_OffByDefault()
+    {
+        var xml = _builder.BuildStopEventRequest("at:46:1");
+
+        xml.ShouldContain("<IncludeOnwardCalls>false</IncludeOnwardCalls>");
+    }
+
+    [Fact]
+    public void BuildStopEventRequest_OnwardCalls_WhenRequested()
+    {
+        var xml = _builder.BuildStopEventRequest("at:46:1", DateTime.UtcNow, 20, includeOnwardCalls: true);
+
+        xml.ShouldContain("<IncludeOnwardCalls>true</IncludeOnwardCalls>");
+    }
+
+    [Fact]
     public void BuildStopEventRequest_IsValidXml()
     {
         var xml = _builder.BuildStopEventRequest("de:643:1234");
