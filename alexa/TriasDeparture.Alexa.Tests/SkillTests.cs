@@ -192,6 +192,21 @@ public sealed class SkillTests
         response.Response.Reprompt.ShouldNotBeNull();
     }
 
+    [Fact]
+    public async Task Launch_WithHomeStop_AsksOnlyForLine()
+    {
+        await _homeStops.SetAsync("amzn1.ask.account.TEST", new ResolvedStop(Krenngasse, "Krenngasse"));
+
+        var response = await Ask(Request(new RequestBody("LaunchRequest", "req", Now, "de-DE")));
+
+        Speech(response).ShouldBe("Welche Linie ab Krenngasse?");
+        response.Response.ShouldEndSession.ShouldBe(false);
+
+        // The answer "der Dreier" carries only the line – the home stop fills in the rest
+        var answer = await Ask(Intent("NextDepartureIntent", [Slot("line", "dreier", "3")], response.SessionAttributes));
+        Speech(answer).ShouldBe("Der nächste 3er Richtung Andritz fährt in 3 Minuten, der übernächste in 11 Minuten.");
+    }
+
     [Theory]
     [InlineData("AMAZON.StopIntent")]
     [InlineData("AMAZON.CancelIntent")]

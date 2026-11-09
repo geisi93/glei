@@ -429,7 +429,13 @@
             "ab {stop}",
             "in {stop}",
             "bei {stop}",
-            "von {stop}"
+            "von {stop}",
+            "{line}",
+            "der {line}",
+            "die {line}",
+            "der {line} richtung {direction}",
+            "die {line} richtung {direction}",
+            "der übernächste {line}"
           ]
         },
         {
@@ -5818,35 +5824,12 @@
               }
             },
             {
-              "id": "S31",
+              "id": "X44",
               "name": {
-                "value": "s einunddreißig",
+                "value": "x vierundvierzig",
                 "synonyms": [
-                  "S31",
-                  "linie s einunddreißig",
-                  "s-bahn einunddreißig"
-                ]
-              }
-            },
-            {
-              "id": "S6",
-              "name": {
-                "value": "s sechs",
-                "synonyms": [
-                  "S6",
-                  "linie s sechs",
-                  "s-bahn sechs"
-                ]
-              }
-            },
-            {
-              "id": "S7",
-              "name": {
-                "value": "s sieben",
-                "synonyms": [
-                  "S7",
-                  "linie s sieben",
-                  "s-bahn sieben"
+                  "X44",
+                  "linie x vierundvierzig"
                 ]
               }
             },
@@ -5884,6 +5867,28 @@
               }
             },
             {
+              "id": "S6",
+              "name": {
+                "value": "s sechs",
+                "synonyms": [
+                  "S6",
+                  "linie s sechs",
+                  "s-bahn sechs"
+                ]
+              }
+            },
+            {
+              "id": "S7",
+              "name": {
+                "value": "s sieben",
+                "synonyms": [
+                  "S7",
+                  "linie s sieben",
+                  "s-bahn sieben"
+                ]
+              }
+            },
+            {
               "id": "64E",
               "name": {
                 "value": "vierundsechzig e",
@@ -5917,16 +5922,6 @@
               }
             },
             {
-              "id": "X44",
-              "name": {
-                "value": "x vierundvierzig",
-                "synonyms": [
-                  "X44",
-                  "linie x vierundvierzig"
-                ]
-              }
-            },
-            {
               "id": "X96",
               "name": {
                 "value": "x sechsundneunzig",
@@ -5944,6 +5939,17 @@
                   "S3",
                   "linie s drei",
                   "s-bahn drei"
+                ]
+              }
+            },
+            {
+              "id": "S31",
+              "name": {
+                "value": "s einunddreißig",
+                "synonyms": [
+                  "S31",
+                  "linie s einunddreißig",
+                  "s-bahn einunddreißig"
                 ]
               }
             },
@@ -6358,6 +6364,11 @@
             {
               "name": {
                 "value": "Brodtrager"
+              }
+            },
+            {
+              "name": {
+                "value": "Bruck a.d.Mur"
               }
             },
             {
@@ -7022,6 +7033,11 @@
             },
             {
               "name": {
+                "value": "Hitzendorf Busbahnhof"
+              }
+            },
+            {
+              "name": {
                 "value": "Hochsteingasse"
               }
             },
@@ -7173,11 +7189,6 @@
             {
               "name": {
                 "value": "Kalsdorf Bahnhofstraße über Flughafen"
-              }
-            },
-            {
-              "name": {
-                "value": "Kalsdorf Gewerbepark via Raaba - Hausmannstätten"
               }
             },
             {
@@ -8483,6 +8494,11 @@
             {
               "name": {
                 "value": "St.Stefan Rosental via Dörfla-Heiligenkreuz W"
+              }
+            },
+            {
+              "name": {
+                "value": "St.Stefan Rosental via Dörfla-Kirchbach"
               }
             },
             {

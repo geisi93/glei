@@ -119,6 +119,14 @@ internal static class Utterances
         yield return "die haltestelle {stop}";
         foreach (var loc in Locations.Where(l => !l.Contains("haltestelle")))
             yield return loc;
+
+        // Follow-up answer to "Welche Linie ab Krenngasse?" (launch with a saved home stop)
+        yield return "{line}";
+        yield return "der {line}";
+        yield return "die {line}";
+        yield return "der {line} richtung {direction}";
+        yield return "die {line} richtung {direction}";
+        yield return "der übernächste {line}";
     }
 
     public static IEnumerable<string> SetHomeStop() =>
