@@ -138,6 +138,9 @@ public sealed class SpeechTests
     [InlineData("vierundsechzig e", "64E")]
     [InlineData("N5", "N5")]
     [InlineData("n fünf", "N5")]
+    [InlineData("zwei dreier", "23")]
+    [InlineData("zwei drei", "23")]
+    [InlineData("2 3er", "23")]
     [InlineData("die bim", null)]
     [InlineData("hallo", null)]
     public void LineNames_Parse(string spoken, string? expected) =>

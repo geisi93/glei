@@ -9,6 +9,9 @@ public static partial class LineNames
     [GeneratedRegex(@"^(?<prefix>n)?\s*(?<number>\d{1,3})\s*(?:er)?\s*(?<suffix>[a-z])?$")]
     private static partial Regex DigitPattern();
 
+    [GeneratedRegex(@"(\d)\s+(\d)")]
+    private static partial Regex SplitDigits();
+
     private static readonly HashSet<string> FillerWords =
         ["linie", "bus", "bim", "tram", "straßenbahn", "strassenbahn", "nachtbus", "der", "die", "nummer"];
 
@@ -28,7 +31,8 @@ public static partial class LineNames
         if (words.Count == 0)
             return null;
 
-        var digits = DigitPattern().Match(string.Join(' ', words));
+        // Speech recognition sometimes splits two-digit lines: "23er" → "2 3er"
+        var digits = DigitPattern().Match(SplitDigits().Replace(string.Join(' ', words), "$1$2"));
         if (digits.Success)
             return $"{digits.Groups["prefix"].Value}{digits.Groups["number"].Value}{digits.Groups["suffix"].Value}".ToUpperInvariant();
 
@@ -37,6 +41,13 @@ public static partial class LineNames
         if (prefix.Length > 0) words.RemoveAt(0);
         if (words.Count == 0 || !GermanNumbers.TryParse(words[0], out var number))
             return null;
+
+        // Digit by digit, as speech recognition hears "23er" sometimes: "zwei dreier" → 23
+        if (number < 10 && words.Count > 1 && GermanNumbers.TryParse(words[1], out var unit) && unit < 10)
+        {
+            number = number * 10 + unit;
+            words.RemoveAt(1);
+        }
 
         var suffix = words.Count > 1 && words[1].Length == 1 ? words[1].ToUpperInvariant() : string.Empty;
         return $"{prefix}{number}{suffix}";

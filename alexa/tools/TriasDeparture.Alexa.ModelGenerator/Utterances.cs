@@ -64,7 +64,7 @@ internal static class Utterances
             yield return $"wann geht der nächste {{line}} {loc}";
         }
 
-        // Subordinate clause after "Alexa, frag glei, …": "wann der nächste {line} in der {stop} fährt"
+        // Subordinate clause after "Alexa, frag Bim Graz, …": "wann der nächste {line} in der {stop} fährt"
         foreach (var loc in Locations)
         {
             yield return $"wann der nächste {{line}} {loc} fährt";
