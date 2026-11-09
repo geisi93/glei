@@ -38,7 +38,7 @@ public sealed class SkillHandler(
         {
             return request.Request.Type switch
             {
-                "LaunchRequest"       => SkillResponse.Ask(Welcome, Reprompt),
+                "LaunchRequest"       => await LaunchAsync(request, ct),
                 "IntentRequest"       => await HandleIntentAsync(request, ct),
                 "SessionEndedRequest" => SkillResponse.Empty(),
                 _                     => SkillResponse.Empty()
@@ -62,6 +62,22 @@ public sealed class SkillHandler(
                                   => Task.FromResult(SkillResponse.Tell(Goodbye)),
             _                     => Task.FromResult(SkillResponse.Ask(Welcome, Reprompt)) // Help, Fallback, unknown
         };
+
+    // ── Launch ───────────────────────────────────────────────────────────────
+
+    /// <summary>Short greeting once a home stop is saved – the user knows the skill by then.</summary>
+    internal static string ShortWelcome(string stopName) => $"Welche Linie ab {stopName}?";
+
+    internal static string ShortReprompt(string stopName) =>
+        $"Welche Linie ab {stopName} interessiert dich? Sag zum Beispiel: der Dreier.";
+
+    private async Task<SkillResponse> LaunchAsync(SkillRequest request, CancellationToken ct)
+    {
+        var home = request.UserId is { } userId ? await homeStops.GetAsync(userId, ct) : null;
+        return home is null
+            ? SkillResponse.Ask(Welcome, Reprompt)
+            : SkillResponse.Ask(ShortWelcome(home.Name), ShortReprompt(home.Name));
+    }
 
     // ── NextDepartureIntent ──────────────────────────────────────────────────
 
