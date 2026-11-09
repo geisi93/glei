@@ -4,11 +4,11 @@ Alexa-Skill für Live-Abfahrten in Graz:
 
 | Du sagst | glei antwortet |
 |----------|----------------|
-| „Alexa, frag glei, wann der nächste Dreier in der Krenngasse fährt“ | „Der nächste 3er Richtung Andritz fährt in 3 Minuten, der übernächste in 11 Minuten.“ |
+| „Alexa, frag Bim Graz, wann der nächste Dreier in der Krenngasse fährt“ | „Der nächste 3er Richtung Andritz fährt in 3 Minuten, der übernächste in 11 Minuten.“ |
 | „… wann fährt der nächste Vierer in der Reininghausstraße?“ | „Der 4er Richtung Liebenau fährt in 3 und in 18 Minuten, Richtung Reininghaus in 7 und in 22 Minuten.“ |
 | „… der nächste Vierer in der Reininghausstraße **Richtung Hauptbahnhof**“ | Nur die passende Richtung – auch wenn „Hauptbahnhof“ nicht die Endstation ist |
 | „… wann fährt die nächste Bim in der Krenngasse?“ | Die nächsten zwei Abfahrten aller Linien |
-| „Alexa, sag glei, **meine Haltestelle ist** Krenngasse“ | Speichert die Haltestelle – danach reicht „Alexa, frag glei, wann der nächste Dreier fährt“ |
+| „Alexa, sag Bim Graz, **meine Haltestelle ist** Krenngasse“ | Speichert die Haltestelle – danach reicht „Alexa, frag Bim Graz, wann der nächste Dreier fährt“ |
 
 Ohne Haltestelle (und ohne gespeicherte) fragt glei nach: „Für welche Haltestelle?“
 
@@ -98,14 +98,18 @@ Alexa Developer Console → **Build → Endpoint → HTTPS**:
 
 ### 7. Testen
 
-- **Test**-Tab → oben auf **Development** stellen → tippen oder sprechen: *„frag glei wann fährt der nächste dreier in der krenngasse“*
-- Am Echo: *„Alexa, frag glei, wann der nächste Dreier in der Krenngasse fährt.“*
+- **Test**-Tab → oben auf **Development** stellen → tippen oder sprechen: *„frag bim graz wann fährt der nächste dreier in der krenngasse“*
+- Am Echo: *„Alexa, frag Bim Graz, wann der nächste Dreier in der Krenngasse fährt.“*
 
 ## Tipps
 
-**Kürzer fragen mit einer Routine:** Alexa-App → *Mehr → Routinen → +* → Auslöser *Sprache*: „wann kommt mein Dreier“ → Aktion *Benutzerdefiniert*: „frag glei wann fährt der nächste dreier in der krenngasse“. Dann reicht „Alexa, wann kommt mein Dreier?“.
+**Kürzer fragen mit einer Routine:** Alexa-App → *Mehr → Routinen → +* → Auslöser *Sprache*: „wann kommt mein Dreier“ → Aktion *Benutzerdefiniert*: „frag bim graz wann fährt der nächste dreier in der krenngasse“. Dann reicht „Alexa, wann kommt mein Dreier?“.
 
-**Wenn Alexa „glei“ schlecht versteht** (z. B. als „gleich“): Aufrufname ändern unter *Build → Invocations → Skill Invocation Name* – und `InvocationName` im Generator anpassen. Erlaubt sind normale Wörter, aber nicht „Skill“, „App“, „Alexa“, „Amazon“ oder „Echo“; Alternativen wären z. B. „glei info“ oder „bim und bus“.
+**Aufrufname:** „Bim Graz“ statt „glei“ – Alexa macht aus „glei“ immer „gleich“, und die Konsole verlangt mindestens zwei Wörter. Ändern unter *Build → Invocations → Skill Invocation Name* – und `InvocationName` im Generator anpassen. Nicht erlaubt: „Skill“, „App“, „Alexa“, „Amazon“, „Echo“.
+
+**„Öffne Bim Graz“ geht am Echo nicht** („wird auf diesem Gerät nicht unterstützt“, Alexa+): stattdessen *„Alexa, starte den Skill Bim Graz“* oder direkt *„Alexa, frag Bim Graz, …“*.
+
+**Zweistellige Linien:** Die Spracherkennung macht aus „dreiundzwanziger“ manchmal „zwei dreier“ – das Modell und das Backend verstehen das als 23.
 
 **Neue Haltestellen/Linien:** Modell neu erzeugen und in Schritt 3 erneut importieren:
 

@@ -17,7 +17,7 @@ using TriasDeparture.Alexa.ModelGenerator;
 using TriasDeparture.Alexa.Speech;
 using TriasDeparture.Infrastructure.Trias;
 
-const string InvocationName = "glei";
+const string InvocationName = "bim graz";
 
 // Bounding box around Graz – the stop list is filtered to locality "Graz" afterwards
 const double West = 15.33, North = 47.13, East = 15.52, South = 46.98;
@@ -153,6 +153,11 @@ List<SlotTypeValue> BuildStopValues()
     }).ToList();
 }
 
+// Speech recognition sometimes hears two-digit lines digit by digit: "23er" → "zwei dreier"
+static string[] DigitByDigit(int n) => n is < 11 or > 99 || n % 10 == 0
+    ? []
+    : [$"{GermanNumbers.Cardinal(n / 10)} {GermanNumbers.Colloquial(n % 10)}", $"{GermanNumbers.Cardinal(n / 10)} {GermanNumbers.Cardinal(n % 10)}"];
+
 List<SlotTypeValue> BuildLineValues()
 {
     var values = new List<SlotTypeValue>();
@@ -166,7 +171,8 @@ List<SlotTypeValue> BuildLineValues()
         [
             $"{n}er", $"linie {cardinal}", $"linie {n}", $"{colloquial} bim", $"{colloquial} bus",
             $"bim {cardinal}", $"bus {cardinal}", $"straßenbahn {cardinal}", $"nummer {cardinal}",
-            .. n == 7 ? ["siebner"] : Array.Empty<string>()
+            .. n == 7 ? ["siebner"] : Array.Empty<string>(),
+            .. DigitByDigit(n)
         ];
         values.Add(new SlotTypeValue(n.ToString(CultureInfo.InvariantCulture), new SlotValueName(colloquial, synonyms)));
     }

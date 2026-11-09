@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "glei",
+      "invocationName": "bim graz",
       "intents": [
         {
           "name": "NextDepartureIntent",
@@ -4133,7 +4133,9 @@
                   "bim elf",
                   "bus elf",
                   "straßenbahn elf",
-                  "nummer elf"
+                  "nummer elf",
+                  "eins einser",
+                  "eins eins"
                 ]
               }
             },
@@ -4150,7 +4152,9 @@
                   "bim zwölf",
                   "bus zwölf",
                   "straßenbahn zwölf",
-                  "nummer zwölf"
+                  "nummer zwölf",
+                  "eins zweier",
+                  "eins zwei"
                 ]
               }
             },
@@ -4167,7 +4171,9 @@
                   "bim dreizehn",
                   "bus dreizehn",
                   "straßenbahn dreizehn",
-                  "nummer dreizehn"
+                  "nummer dreizehn",
+                  "eins dreier",
+                  "eins drei"
                 ]
               }
             },
@@ -4184,7 +4190,9 @@
                   "bim vierzehn",
                   "bus vierzehn",
                   "straßenbahn vierzehn",
-                  "nummer vierzehn"
+                  "nummer vierzehn",
+                  "eins vierer",
+                  "eins vier"
                 ]
               }
             },
@@ -4201,7 +4209,9 @@
                   "bim fünfzehn",
                   "bus fünfzehn",
                   "straßenbahn fünfzehn",
-                  "nummer fünfzehn"
+                  "nummer fünfzehn",
+                  "eins fünfer",
+                  "eins fünf"
                 ]
               }
             },
@@ -4218,7 +4228,9 @@
                   "bim sechzehn",
                   "bus sechzehn",
                   "straßenbahn sechzehn",
-                  "nummer sechzehn"
+                  "nummer sechzehn",
+                  "eins sechser",
+                  "eins sechs"
                 ]
               }
             },
@@ -4235,7 +4247,9 @@
                   "bim siebzehn",
                   "bus siebzehn",
                   "straßenbahn siebzehn",
-                  "nummer siebzehn"
+                  "nummer siebzehn",
+                  "eins siebener",
+                  "eins sieben"
                 ]
               }
             },
@@ -4252,7 +4266,9 @@
                   "bim achtzehn",
                   "bus achtzehn",
                   "straßenbahn achtzehn",
-                  "nummer achtzehn"
+                  "nummer achtzehn",
+                  "eins achter",
+                  "eins acht"
                 ]
               }
             },
@@ -4269,7 +4285,9 @@
                   "bim neunzehn",
                   "bus neunzehn",
                   "straßenbahn neunzehn",
-                  "nummer neunzehn"
+                  "nummer neunzehn",
+                  "eins neuner",
+                  "eins neun"
                 ]
               }
             },
@@ -4303,7 +4321,9 @@
                   "bim einundzwanzig",
                   "bus einundzwanzig",
                   "straßenbahn einundzwanzig",
-                  "nummer einundzwanzig"
+                  "nummer einundzwanzig",
+                  "zwei einser",
+                  "zwei eins"
                 ]
               }
             },
@@ -4320,7 +4340,9 @@
                   "bim zweiundzwanzig",
                   "bus zweiundzwanzig",
                   "straßenbahn zweiundzwanzig",
-                  "nummer zweiundzwanzig"
+                  "nummer zweiundzwanzig",
+                  "zwei zweier",
+                  "zwei zwei"
                 ]
               }
             },
@@ -4337,7 +4359,9 @@
                   "bim dreiundzwanzig",
                   "bus dreiundzwanzig",
                   "straßenbahn dreiundzwanzig",
-                  "nummer dreiundzwanzig"
+                  "nummer dreiundzwanzig",
+                  "zwei dreier",
+                  "zwei drei"
                 ]
               }
             },
@@ -4354,7 +4378,9 @@
                   "bim vierundzwanzig",
                   "bus vierundzwanzig",
                   "straßenbahn vierundzwanzig",
-                  "nummer vierundzwanzig"
+                  "nummer vierundzwanzig",
+                  "zwei vierer",
+                  "zwei vier"
                 ]
               }
             },
@@ -4371,7 +4397,9 @@
                   "bim fünfundzwanzig",
                   "bus fünfundzwanzig",
                   "straßenbahn fünfundzwanzig",
-                  "nummer fünfundzwanzig"
+                  "nummer fünfundzwanzig",
+                  "zwei fünfer",
+                  "zwei fünf"
                 ]
               }
             },
@@ -4388,7 +4416,9 @@
                   "bim sechsundzwanzig",
                   "bus sechsundzwanzig",
                   "straßenbahn sechsundzwanzig",
-                  "nummer sechsundzwanzig"
+                  "nummer sechsundzwanzig",
+                  "zwei sechser",
+                  "zwei sechs"
                 ]
               }
             },
@@ -4405,7 +4435,9 @@
                   "bim siebenundzwanzig",
                   "bus siebenundzwanzig",
                   "straßenbahn siebenundzwanzig",
-                  "nummer siebenundzwanzig"
+                  "nummer siebenundzwanzig",
+                  "zwei siebener",
+                  "zwei sieben"
                 ]
               }
             },
@@ -4422,7 +4454,9 @@
                   "bim achtundzwanzig",
                   "bus achtundzwanzig",
                   "straßenbahn achtundzwanzig",
-                  "nummer achtundzwanzig"
+                  "nummer achtundzwanzig",
+                  "zwei achter",
+                  "zwei acht"
                 ]
               }
             },
@@ -4439,7 +4473,9 @@
                   "bim neunundzwanzig",
                   "bus neunundzwanzig",
                   "straßenbahn neunundzwanzig",
-                  "nummer neunundzwanzig"
+                  "nummer neunundzwanzig",
+                  "zwei neuner",
+                  "zwei neun"
                 ]
               }
             },
@@ -4473,7 +4509,9 @@
                   "bim einunddreißig",
                   "bus einunddreißig",
                   "straßenbahn einunddreißig",
-                  "nummer einunddreißig"
+                  "nummer einunddreißig",
+                  "drei einser",
+                  "drei eins"
                 ]
               }
             },
@@ -4490,7 +4528,9 @@
                   "bim zweiunddreißig",
                   "bus zweiunddreißig",
                   "straßenbahn zweiunddreißig",
-                  "nummer zweiunddreißig"
+                  "nummer zweiunddreißig",
+                  "drei zweier",
+                  "drei zwei"
                 ]
               }
             },
@@ -4507,7 +4547,9 @@
                   "bim dreiunddreißig",
                   "bus dreiunddreißig",
                   "straßenbahn dreiunddreißig",
-                  "nummer dreiunddreißig"
+                  "nummer dreiunddreißig",
+                  "drei dreier",
+                  "drei drei"
                 ]
               }
             },
@@ -4524,7 +4566,9 @@
                   "bim vierunddreißig",
                   "bus vierunddreißig",
                   "straßenbahn vierunddreißig",
-                  "nummer vierunddreißig"
+                  "nummer vierunddreißig",
+                  "drei vierer",
+                  "drei vier"
                 ]
               }
             },
@@ -4541,7 +4585,9 @@
                   "bim fünfunddreißig",
                   "bus fünfunddreißig",
                   "straßenbahn fünfunddreißig",
-                  "nummer fünfunddreißig"
+                  "nummer fünfunddreißig",
+                  "drei fünfer",
+                  "drei fünf"
                 ]
               }
             },
@@ -4558,7 +4604,9 @@
                   "bim sechsunddreißig",
                   "bus sechsunddreißig",
                   "straßenbahn sechsunddreißig",
-                  "nummer sechsunddreißig"
+                  "nummer sechsunddreißig",
+                  "drei sechser",
+                  "drei sechs"
                 ]
               }
             },
@@ -4575,7 +4623,9 @@
                   "bim siebenunddreißig",
                   "bus siebenunddreißig",
                   "straßenbahn siebenunddreißig",
-                  "nummer siebenunddreißig"
+                  "nummer siebenunddreißig",
+                  "drei siebener",
+                  "drei sieben"
                 ]
               }
             },
@@ -4592,7 +4642,9 @@
                   "bim achtunddreißig",
                   "bus achtunddreißig",
                   "straßenbahn achtunddreißig",
-                  "nummer achtunddreißig"
+                  "nummer achtunddreißig",
+                  "drei achter",
+                  "drei acht"
                 ]
               }
             },
@@ -4609,7 +4661,9 @@
                   "bim neununddreißig",
                   "bus neununddreißig",
                   "straßenbahn neununddreißig",
-                  "nummer neununddreißig"
+                  "nummer neununddreißig",
+                  "drei neuner",
+                  "drei neun"
                 ]
               }
             },
@@ -4643,7 +4697,9 @@
                   "bim einundvierzig",
                   "bus einundvierzig",
                   "straßenbahn einundvierzig",
-                  "nummer einundvierzig"
+                  "nummer einundvierzig",
+                  "vier einser",
+                  "vier eins"
                 ]
               }
             },
@@ -4660,7 +4716,9 @@
                   "bim zweiundvierzig",
                   "bus zweiundvierzig",
                   "straßenbahn zweiundvierzig",
-                  "nummer zweiundvierzig"
+                  "nummer zweiundvierzig",
+                  "vier zweier",
+                  "vier zwei"
                 ]
               }
             },
@@ -4677,7 +4735,9 @@
                   "bim dreiundvierzig",
                   "bus dreiundvierzig",
                   "straßenbahn dreiundvierzig",
-                  "nummer dreiundvierzig"
+                  "nummer dreiundvierzig",
+                  "vier dreier",
+                  "vier drei"
                 ]
               }
             },
@@ -4694,7 +4754,9 @@
                   "bim vierundvierzig",
                   "bus vierundvierzig",
                   "straßenbahn vierundvierzig",
-                  "nummer vierundvierzig"
+                  "nummer vierundvierzig",
+                  "vier vierer",
+                  "vier vier"
                 ]
               }
             },
@@ -4711,7 +4773,9 @@
                   "bim fünfundvierzig",
                   "bus fünfundvierzig",
                   "straßenbahn fünfundvierzig",
-                  "nummer fünfundvierzig"
+                  "nummer fünfundvierzig",
+                  "vier fünfer",
+                  "vier fünf"
                 ]
               }
             },
@@ -4728,7 +4792,9 @@
                   "bim sechsundvierzig",
                   "bus sechsundvierzig",
                   "straßenbahn sechsundvierzig",
-                  "nummer sechsundvierzig"
+                  "nummer sechsundvierzig",
+                  "vier sechser",
+                  "vier sechs"
                 ]
               }
             },
@@ -4745,7 +4811,9 @@
                   "bim siebenundvierzig",
                   "bus siebenundvierzig",
                   "straßenbahn siebenundvierzig",
-                  "nummer siebenundvierzig"
+                  "nummer siebenundvierzig",
+                  "vier siebener",
+                  "vier sieben"
                 ]
               }
             },
@@ -4762,7 +4830,9 @@
                   "bim achtundvierzig",
                   "bus achtundvierzig",
                   "straßenbahn achtundvierzig",
-                  "nummer achtundvierzig"
+                  "nummer achtundvierzig",
+                  "vier achter",
+                  "vier acht"
                 ]
               }
             },
@@ -4779,7 +4849,9 @@
                   "bim neunundvierzig",
                   "bus neunundvierzig",
                   "straßenbahn neunundvierzig",
-                  "nummer neunundvierzig"
+                  "nummer neunundvierzig",
+                  "vier neuner",
+                  "vier neun"
                 ]
               }
             },
@@ -4813,7 +4885,9 @@
                   "bim einundfünfzig",
                   "bus einundfünfzig",
                   "straßenbahn einundfünfzig",
-                  "nummer einundfünfzig"
+                  "nummer einundfünfzig",
+                  "fünf einser",
+                  "fünf eins"
                 ]
               }
             },
@@ -4830,7 +4904,9 @@
                   "bim zweiundfünfzig",
                   "bus zweiundfünfzig",
                   "straßenbahn zweiundfünfzig",
-                  "nummer zweiundfünfzig"
+                  "nummer zweiundfünfzig",
+                  "fünf zweier",
+                  "fünf zwei"
                 ]
               }
             },
@@ -4847,7 +4923,9 @@
                   "bim dreiundfünfzig",
                   "bus dreiundfünfzig",
                   "straßenbahn dreiundfünfzig",
-                  "nummer dreiundfünfzig"
+                  "nummer dreiundfünfzig",
+                  "fünf dreier",
+                  "fünf drei"
                 ]
               }
             },
@@ -4864,7 +4942,9 @@
                   "bim vierundfünfzig",
                   "bus vierundfünfzig",
                   "straßenbahn vierundfünfzig",
-                  "nummer vierundfünfzig"
+                  "nummer vierundfünfzig",
+                  "fünf vierer",
+                  "fünf vier"
                 ]
               }
             },
@@ -4881,7 +4961,9 @@
                   "bim fünfundfünfzig",
                   "bus fünfundfünfzig",
                   "straßenbahn fünfundfünfzig",
-                  "nummer fünfundfünfzig"
+                  "nummer fünfundfünfzig",
+                  "fünf fünfer",
+                  "fünf fünf"
                 ]
               }
             },
@@ -4898,7 +4980,9 @@
                   "bim sechsundfünfzig",
                   "bus sechsundfünfzig",
                   "straßenbahn sechsundfünfzig",
-                  "nummer sechsundfünfzig"
+                  "nummer sechsundfünfzig",
+                  "fünf sechser",
+                  "fünf sechs"
                 ]
               }
             },
@@ -4915,7 +4999,9 @@
                   "bim siebenundfünfzig",
                   "bus siebenundfünfzig",
                   "straßenbahn siebenundfünfzig",
-                  "nummer siebenundfünfzig"
+                  "nummer siebenundfünfzig",
+                  "fünf siebener",
+                  "fünf sieben"
                 ]
               }
             },
@@ -4932,7 +5018,9 @@
                   "bim achtundfünfzig",
                   "bus achtundfünfzig",
                   "straßenbahn achtundfünfzig",
-                  "nummer achtundfünfzig"
+                  "nummer achtundfünfzig",
+                  "fünf achter",
+                  "fünf acht"
                 ]
               }
             },
@@ -4949,7 +5037,9 @@
                   "bim neunundfünfzig",
                   "bus neunundfünfzig",
                   "straßenbahn neunundfünfzig",
-                  "nummer neunundfünfzig"
+                  "nummer neunundfünfzig",
+                  "fünf neuner",
+                  "fünf neun"
                 ]
               }
             },
@@ -4983,7 +5073,9 @@
                   "bim einundsechzig",
                   "bus einundsechzig",
                   "straßenbahn einundsechzig",
-                  "nummer einundsechzig"
+                  "nummer einundsechzig",
+                  "sechs einser",
+                  "sechs eins"
                 ]
               }
             },
@@ -5000,7 +5092,9 @@
                   "bim zweiundsechzig",
                   "bus zweiundsechzig",
                   "straßenbahn zweiundsechzig",
-                  "nummer zweiundsechzig"
+                  "nummer zweiundsechzig",
+                  "sechs zweier",
+                  "sechs zwei"
                 ]
               }
             },
@@ -5017,7 +5111,9 @@
                   "bim dreiundsechzig",
                   "bus dreiundsechzig",
                   "straßenbahn dreiundsechzig",
-                  "nummer dreiundsechzig"
+                  "nummer dreiundsechzig",
+                  "sechs dreier",
+                  "sechs drei"
                 ]
               }
             },
@@ -5034,7 +5130,9 @@
                   "bim vierundsechzig",
                   "bus vierundsechzig",
                   "straßenbahn vierundsechzig",
-                  "nummer vierundsechzig"
+                  "nummer vierundsechzig",
+                  "sechs vierer",
+                  "sechs vier"
                 ]
               }
             },
@@ -5051,7 +5149,9 @@
                   "bim fünfundsechzig",
                   "bus fünfundsechzig",
                   "straßenbahn fünfundsechzig",
-                  "nummer fünfundsechzig"
+                  "nummer fünfundsechzig",
+                  "sechs fünfer",
+                  "sechs fünf"
                 ]
               }
             },
@@ -5068,7 +5168,9 @@
                   "bim sechsundsechzig",
                   "bus sechsundsechzig",
                   "straßenbahn sechsundsechzig",
-                  "nummer sechsundsechzig"
+                  "nummer sechsundsechzig",
+                  "sechs sechser",
+                  "sechs sechs"
                 ]
               }
             },
@@ -5085,7 +5187,9 @@
                   "bim siebenundsechzig",
                   "bus siebenundsechzig",
                   "straßenbahn siebenundsechzig",
-                  "nummer siebenundsechzig"
+                  "nummer siebenundsechzig",
+                  "sechs siebener",
+                  "sechs sieben"
                 ]
               }
             },
@@ -5102,7 +5206,9 @@
                   "bim achtundsechzig",
                   "bus achtundsechzig",
                   "straßenbahn achtundsechzig",
-                  "nummer achtundsechzig"
+                  "nummer achtundsechzig",
+                  "sechs achter",
+                  "sechs acht"
                 ]
               }
             },
@@ -5119,7 +5225,9 @@
                   "bim neunundsechzig",
                   "bus neunundsechzig",
                   "straßenbahn neunundsechzig",
-                  "nummer neunundsechzig"
+                  "nummer neunundsechzig",
+                  "sechs neuner",
+                  "sechs neun"
                 ]
               }
             },
@@ -5153,7 +5261,9 @@
                   "bim einundsiebzig",
                   "bus einundsiebzig",
                   "straßenbahn einundsiebzig",
-                  "nummer einundsiebzig"
+                  "nummer einundsiebzig",
+                  "sieben einser",
+                  "sieben eins"
                 ]
               }
             },
@@ -5170,7 +5280,9 @@
                   "bim zweiundsiebzig",
                   "bus zweiundsiebzig",
                   "straßenbahn zweiundsiebzig",
-                  "nummer zweiundsiebzig"
+                  "nummer zweiundsiebzig",
+                  "sieben zweier",
+                  "sieben zwei"
                 ]
               }
             },
@@ -5187,7 +5299,9 @@
                   "bim dreiundsiebzig",
                   "bus dreiundsiebzig",
                   "straßenbahn dreiundsiebzig",
-                  "nummer dreiundsiebzig"
+                  "nummer dreiundsiebzig",
+                  "sieben dreier",
+                  "sieben drei"
                 ]
               }
             },
@@ -5204,7 +5318,9 @@
                   "bim vierundsiebzig",
                   "bus vierundsiebzig",
                   "straßenbahn vierundsiebzig",
-                  "nummer vierundsiebzig"
+                  "nummer vierundsiebzig",
+                  "sieben vierer",
+                  "sieben vier"
                 ]
               }
             },
@@ -5221,7 +5337,9 @@
                   "bim fünfundsiebzig",
                   "bus fünfundsiebzig",
                   "straßenbahn fünfundsiebzig",
-                  "nummer fünfundsiebzig"
+                  "nummer fünfundsiebzig",
+                  "sieben fünfer",
+                  "sieben fünf"
                 ]
               }
             },
@@ -5238,7 +5356,9 @@
                   "bim sechsundsiebzig",
                   "bus sechsundsiebzig",
                   "straßenbahn sechsundsiebzig",
-                  "nummer sechsundsiebzig"
+                  "nummer sechsundsiebzig",
+                  "sieben sechser",
+                  "sieben sechs"
                 ]
               }
             },
@@ -5255,7 +5375,9 @@
                   "bim siebenundsiebzig",
                   "bus siebenundsiebzig",
                   "straßenbahn siebenundsiebzig",
-                  "nummer siebenundsiebzig"
+                  "nummer siebenundsiebzig",
+                  "sieben siebener",
+                  "sieben sieben"
                 ]
               }
             },
@@ -5272,7 +5394,9 @@
                   "bim achtundsiebzig",
                   "bus achtundsiebzig",
                   "straßenbahn achtundsiebzig",
-                  "nummer achtundsiebzig"
+                  "nummer achtundsiebzig",
+                  "sieben achter",
+                  "sieben acht"
                 ]
               }
             },
@@ -5289,7 +5413,9 @@
                   "bim neunundsiebzig",
                   "bus neunundsiebzig",
                   "straßenbahn neunundsiebzig",
-                  "nummer neunundsiebzig"
+                  "nummer neunundsiebzig",
+                  "sieben neuner",
+                  "sieben neun"
                 ]
               }
             },
@@ -5323,7 +5449,9 @@
                   "bim einundachtzig",
                   "bus einundachtzig",
                   "straßenbahn einundachtzig",
-                  "nummer einundachtzig"
+                  "nummer einundachtzig",
+                  "acht einser",
+                  "acht eins"
                 ]
               }
             },
@@ -5340,7 +5468,9 @@
                   "bim zweiundachtzig",
                   "bus zweiundachtzig",
                   "straßenbahn zweiundachtzig",
-                  "nummer zweiundachtzig"
+                  "nummer zweiundachtzig",
+                  "acht zweier",
+                  "acht zwei"
                 ]
               }
             },
@@ -5357,7 +5487,9 @@
                   "bim dreiundachtzig",
                   "bus dreiundachtzig",
                   "straßenbahn dreiundachtzig",
-                  "nummer dreiundachtzig"
+                  "nummer dreiundachtzig",
+                  "acht dreier",
+                  "acht drei"
                 ]
               }
             },
@@ -5374,7 +5506,9 @@
                   "bim vierundachtzig",
                   "bus vierundachtzig",
                   "straßenbahn vierundachtzig",
-                  "nummer vierundachtzig"
+                  "nummer vierundachtzig",
+                  "acht vierer",
+                  "acht vier"
                 ]
               }
             },
@@ -5391,7 +5525,9 @@
                   "bim fünfundachtzig",
                   "bus fünfundachtzig",
                   "straßenbahn fünfundachtzig",
-                  "nummer fünfundachtzig"
+                  "nummer fünfundachtzig",
+                  "acht fünfer",
+                  "acht fünf"
                 ]
               }
             },
@@ -5408,7 +5544,9 @@
                   "bim sechsundachtzig",
                   "bus sechsundachtzig",
                   "straßenbahn sechsundachtzig",
-                  "nummer sechsundachtzig"
+                  "nummer sechsundachtzig",
+                  "acht sechser",
+                  "acht sechs"
                 ]
               }
             },
@@ -5425,7 +5563,9 @@
                   "bim siebenundachtzig",
                   "bus siebenundachtzig",
                   "straßenbahn siebenundachtzig",
-                  "nummer siebenundachtzig"
+                  "nummer siebenundachtzig",
+                  "acht siebener",
+                  "acht sieben"
                 ]
               }
             },
@@ -5442,7 +5582,9 @@
                   "bim achtundachtzig",
                   "bus achtundachtzig",
                   "straßenbahn achtundachtzig",
-                  "nummer achtundachtzig"
+                  "nummer achtundachtzig",
+                  "acht achter",
+                  "acht acht"
                 ]
               }
             },
@@ -5459,7 +5601,9 @@
                   "bim neunundachtzig",
                   "bus neunundachtzig",
                   "straßenbahn neunundachtzig",
-                  "nummer neunundachtzig"
+                  "nummer neunundachtzig",
+                  "acht neuner",
+                  "acht neun"
                 ]
               }
             },
@@ -5493,7 +5637,9 @@
                   "bim einundneunzig",
                   "bus einundneunzig",
                   "straßenbahn einundneunzig",
-                  "nummer einundneunzig"
+                  "nummer einundneunzig",
+                  "neun einser",
+                  "neun eins"
                 ]
               }
             },
@@ -5510,7 +5656,9 @@
                   "bim zweiundneunzig",
                   "bus zweiundneunzig",
                   "straßenbahn zweiundneunzig",
-                  "nummer zweiundneunzig"
+                  "nummer zweiundneunzig",
+                  "neun zweier",
+                  "neun zwei"
                 ]
               }
             },
@@ -5527,7 +5675,9 @@
                   "bim dreiundneunzig",
                   "bus dreiundneunzig",
                   "straßenbahn dreiundneunzig",
-                  "nummer dreiundneunzig"
+                  "nummer dreiundneunzig",
+                  "neun dreier",
+                  "neun drei"
                 ]
               }
             },
@@ -5544,7 +5694,9 @@
                   "bim vierundneunzig",
                   "bus vierundneunzig",
                   "straßenbahn vierundneunzig",
-                  "nummer vierundneunzig"
+                  "nummer vierundneunzig",
+                  "neun vierer",
+                  "neun vier"
                 ]
               }
             },
@@ -5561,7 +5713,9 @@
                   "bim fünfundneunzig",
                   "bus fünfundneunzig",
                   "straßenbahn fünfundneunzig",
-                  "nummer fünfundneunzig"
+                  "nummer fünfundneunzig",
+                  "neun fünfer",
+                  "neun fünf"
                 ]
               }
             },
@@ -5578,7 +5732,9 @@
                   "bim sechsundneunzig",
                   "bus sechsundneunzig",
                   "straßenbahn sechsundneunzig",
-                  "nummer sechsundneunzig"
+                  "nummer sechsundneunzig",
+                  "neun sechser",
+                  "neun sechs"
                 ]
               }
             },
@@ -5595,7 +5751,9 @@
                   "bim siebenundneunzig",
                   "bus siebenundneunzig",
                   "straßenbahn siebenundneunzig",
-                  "nummer siebenundneunzig"
+                  "nummer siebenundneunzig",
+                  "neun siebener",
+                  "neun sieben"
                 ]
               }
             },
@@ -5612,7 +5770,9 @@
                   "bim achtundneunzig",
                   "bus achtundneunzig",
                   "straßenbahn achtundneunzig",
-                  "nummer achtundneunzig"
+                  "nummer achtundneunzig",
+                  "neun achter",
+                  "neun acht"
                 ]
               }
             },
@@ -5629,7 +5789,9 @@
                   "bim neunundneunzig",
                   "bus neunundneunzig",
                   "straßenbahn neunundneunzig",
-                  "nummer neunundneunzig"
+                  "nummer neunundneunzig",
+                  "neun neuner",
+                  "neun neun"
                 ]
               }
             },
@@ -5645,24 +5807,24 @@
               }
             },
             {
-              "id": "34E",
+              "id": "67E",
               "name": {
-                "value": "vierunddreißig e",
+                "value": "siebenundsechzig e",
                 "synonyms": [
-                  "34E",
-                  "linie vierunddreißig e",
-                  "vierunddreißiger e"
+                  "67E",
+                  "linie siebenundsechzig e",
+                  "siebenundsechziger e"
                 ]
               }
             },
             {
-              "id": "S1",
+              "id": "S31",
               "name": {
-                "value": "s eins",
+                "value": "s einunddreißig",
                 "synonyms": [
-                  "S1",
-                  "linie s eins",
-                  "s-bahn eins"
+                  "S31",
+                  "linie s einunddreißig",
+                  "s-bahn einunddreißig"
                 ]
               }
             },
@@ -5678,17 +5840,6 @@
               }
             },
             {
-              "id": "S3",
-              "name": {
-                "value": "s drei",
-                "synonyms": [
-                  "S3",
-                  "linie s drei",
-                  "s-bahn drei"
-                ]
-              }
-            },
-            {
               "id": "S7",
               "name": {
                 "value": "s sieben",
@@ -5696,6 +5847,28 @@
                   "S7",
                   "linie s sieben",
                   "s-bahn sieben"
+                ]
+              }
+            },
+            {
+              "id": "52Z",
+              "name": {
+                "value": "zweiundfünfzig z",
+                "synonyms": [
+                  "52Z",
+                  "linie zweiundfünfzig z",
+                  "zweiundfünfziger z"
+                ]
+              }
+            },
+            {
+              "id": "S1",
+              "name": {
+                "value": "s eins",
+                "synonyms": [
+                  "S1",
+                  "linie s eins",
+                  "s-bahn eins"
                 ]
               }
             },
@@ -5711,6 +5884,17 @@
               }
             },
             {
+              "id": "64E",
+              "name": {
+                "value": "vierundsechzig e",
+                "synonyms": [
+                  "64E",
+                  "linie vierundsechzig e",
+                  "vierundsechziger e"
+                ]
+              }
+            },
+            {
               "id": "41E",
               "name": {
                 "value": "einundvierzig e",
@@ -5718,6 +5902,27 @@
                   "41E",
                   "linie einundvierzig e",
                   "einundvierziger e"
+                ]
+              }
+            },
+            {
+              "id": "52E",
+              "name": {
+                "value": "zweiundfünfzig e",
+                "synonyms": [
+                  "52E",
+                  "linie zweiundfünfzig e",
+                  "zweiundfünfziger e"
+                ]
+              }
+            },
+            {
+              "id": "X44",
+              "name": {
+                "value": "x vierundvierzig",
+                "synonyms": [
+                  "X44",
+                  "linie x vierundvierzig"
                 ]
               }
             },
@@ -5732,12 +5937,34 @@
               }
             },
             {
+              "id": "S3",
+              "name": {
+                "value": "s drei",
+                "synonyms": [
+                  "S3",
+                  "linie s drei",
+                  "s-bahn drei"
+                ]
+              }
+            },
+            {
               "id": "E1",
               "name": {
                 "value": "e eins",
                 "synonyms": [
                   "E1",
                   "linie e eins"
+                ]
+              }
+            },
+            {
+              "id": "65A",
+              "name": {
+                "value": "fünfundsechzig a",
+                "synonyms": [
+                  "65A",
+                  "linie fünfundsechzig a",
+                  "fünfundsechziger a"
                 ]
               }
             },
@@ -5751,19 +5978,6 @@
                   "nachtbus eins",
                   "nachtbus n eins",
                   "en eins"
-                ]
-              }
-            },
-            {
-              "id": "N7",
-              "name": {
-                "value": "n sieben",
-                "synonyms": [
-                  "N7",
-                  "linie n sieben",
-                  "nachtbus sieben",
-                  "nachtbus n sieben",
-                  "en sieben"
                 ]
               }
             },
@@ -5829,6 +6043,19 @@
                   "nachtbus sechs",
                   "nachtbus n sechs",
                   "en sechs"
+                ]
+              }
+            },
+            {
+              "id": "N7",
+              "name": {
+                "value": "n sieben",
+                "synonyms": [
+                  "N7",
+                  "linie n sieben",
+                  "nachtbus sieben",
+                  "nachtbus n sieben",
+                  "en sieben"
                 ]
               }
             },
@@ -6020,6 +6247,11 @@
             },
             {
               "name": {
+                "value": "Bad Straßgang Glaserweg"
+              }
+            },
+            {
+              "name": {
                 "value": "Bad zur Sonne Stadtbibliothek"
               }
             },
@@ -6180,6 +6412,11 @@
             },
             {
               "name": {
+                "value": "Deutschlandsberg Stadt"
+              }
+            },
+            {
+              "name": {
                 "value": "Dietrichsteinplatz"
               }
             },
@@ -6241,6 +6478,11 @@
             {
               "name": {
                 "value": "Dürrgrabenweg"
+              }
+            },
+            {
+              "name": {
+                "value": "Dürrgrabenweg via Ziegelstraße"
               }
             },
             {
@@ -6340,7 +6582,12 @@
             },
             {
               "name": {
-                "value": "Faßlberg Busbahnhof"
+                "value": "Fehring"
+              }
+            },
+            {
+              "name": {
+                "value": "Fehring Bahnhof"
               }
             },
             {
@@ -6361,6 +6608,16 @@
             {
               "name": {
                 "value": "Fernheizkraftwerk"
+              }
+            },
+            {
+              "name": {
+                "value": "Fernitz E.-Johann-Platz via Raaba-Hausmannstätten"
+              }
+            },
+            {
+              "name": {
+                "value": "Fernitz Erzherzog-Johann-Platz über Flughafen Graz"
               }
             },
             {
@@ -6400,17 +6657,12 @@
             },
             {
               "name": {
-                "value": "Flughafen Wien Bahnhof"
+                "value": "Flughafen Graz"
               }
             },
             {
               "name": {
                 "value": "Flurgasse"
-              }
-            },
-            {
-              "name": {
-                "value": "Fölling P R"
               }
             },
             {
@@ -6446,11 +6698,6 @@
             {
               "name": {
                 "value": "Fröhlichgasse Messe"
-              }
-            },
-            {
-              "name": {
-                "value": "Frohnleiten"
               }
             },
             {
@@ -6495,6 +6742,11 @@
             },
             {
               "name": {
+                "value": "Gesundheitskasse"
+              }
+            },
+            {
+              "name": {
                 "value": "Gewerbepark Rudersdorf XAL"
               }
             },
@@ -6511,6 +6763,11 @@
             {
               "name": {
                 "value": "Glaserweg"
+              }
+            },
+            {
+              "name": {
+                "value": "Gleisdorf Bahnhof"
               }
             },
             {
@@ -6541,6 +6798,11 @@
             {
               "name": {
                 "value": "Göstinger Straße UKH"
+              }
+            },
+            {
+              "name": {
+                "value": "Göstingerstraße UKH"
               }
             },
             {
@@ -6616,6 +6878,11 @@
             {
               "name": {
                 "value": "Griesplatz"
+              }
+            },
+            {
+              "name": {
+                "value": "Griesplatz Don Bosco Harter Straße"
               }
             },
             {
@@ -6721,6 +6988,11 @@
             {
               "name": {
                 "value": "Hauptplatz Congress"
+              }
+            },
+            {
+              "name": {
+                "value": "Heiligenkreuz Waasen via Dörfla-Hausmannstätten"
               }
             },
             {
@@ -6895,6 +7167,21 @@
             },
             {
               "name": {
+                "value": "Kalsdorf b.Graz Schulzentrum über Flughafen"
+              }
+            },
+            {
+              "name": {
+                "value": "Kalsdorf Bahnhofstraße über Flughafen"
+              }
+            },
+            {
+              "name": {
+                "value": "Kalsdorf Gewerbepark via Raaba - Hausmannstätten"
+              }
+            },
+            {
+              "name": {
                 "value": "Kalvarienbergstraße"
               }
             },
@@ -6906,6 +7193,11 @@
             {
               "name": {
                 "value": "Kalvariengürtel"
+              }
+            },
+            {
+              "name": {
+                "value": "Kalvariengürtel Hauptbahnhof Don Bosco"
               }
             },
             {
@@ -6996,11 +7288,6 @@
             {
               "name": {
                 "value": "Kirche Don Bosco"
-              }
-            },
-            {
-              "name": {
-                "value": "Klagenfurt Hauptbahnhof"
               }
             },
             {
@@ -7176,16 +7463,6 @@
             {
               "name": {
                 "value": "Liebenau Postamt"
-              }
-            },
-            {
-              "name": {
-                "value": "Lienz Bahnhof"
-              }
-            },
-            {
-              "name": {
-                "value": "Linz Donau Hauptbahnhof"
               }
             },
             {
@@ -7375,11 +7652,6 @@
             },
             {
               "name": {
-                "value": "München Hauptbahnhof"
-              }
-            },
-            {
-              "name": {
                 "value": "Münzgrabenkirche"
               }
             },
@@ -7411,11 +7683,6 @@
             {
               "name": {
                 "value": "Nernstgasse"
-              }
-            },
-            {
-              "name": {
-                "value": "Nestelbach Gemeindezentrum via Raaba-Vasoldsberg"
               }
             },
             {
@@ -7541,6 +7808,11 @@
             {
               "name": {
                 "value": "P. Rosegger Straße"
+              }
+            },
+            {
+              "name": {
+                "value": "Pachern Park Ride"
               }
             },
             {
@@ -7695,6 +7967,11 @@
             },
             {
               "name": {
+                "value": "Premstätten-Tobelbad Bahnhof über Mantscha"
+              }
+            },
+            {
+              "name": {
                 "value": "Prevenhueberweg"
               }
             },
@@ -7766,11 +8043,6 @@
             {
               "name": {
                 "value": "Ragnitz"
-              }
-            },
-            {
-              "name": {
-                "value": "Ragnitz Stifting"
               }
             },
             {
@@ -7856,6 +8128,11 @@
             {
               "name": {
                 "value": "Rohrbachfeld"
+              }
+            },
+            {
+              "name": {
+                "value": "Roma Stazione di Roma Tiburtina"
               }
             },
             {
@@ -7960,6 +8237,11 @@
             },
             {
               "name": {
+                "value": "Schladming"
+              }
+            },
+            {
+              "name": {
                 "value": "Schloss Eggenberg"
               }
             },
@@ -8060,6 +8342,11 @@
             },
             {
               "name": {
+                "value": "Schulzentrum St. Peter via W.P.-Chrysler-Platz"
+              }
+            },
+            {
+              "name": {
                 "value": "Schulzentrum St.Peter"
               }
             },
@@ -8110,11 +8397,6 @@
             },
             {
               "name": {
-                "value": "Söding-Mooskirchen Bahnhof über Hitzendorf"
-              }
-            },
-            {
-              "name": {
                 "value": "Sonnenhang"
               }
             },
@@ -8145,6 +8427,16 @@
             },
             {
               "name": {
+                "value": "St. Lukas Don Bosco Harter Straße"
+              }
+            },
+            {
+              "name": {
+                "value": "St.Bartholomä Ort über Hitzendorf"
+              }
+            },
+            {
+              "name": {
                 "value": "St.Georgen Stiefing Ort über Wildon"
               }
             },
@@ -8170,7 +8462,12 @@
             },
             {
               "name": {
-                "value": "St.Marein Gewerbepark via Laßnitzhöhe-Krumegg"
+                "value": "St.Marein Gewerbepark via A2 Krumegg"
+              }
+            },
+            {
+              "name": {
+                "value": "St.Marein Gewerbepark via Pachern - Brunn"
               }
             },
             {
@@ -8325,12 +8622,22 @@
             },
             {
               "name": {
+                "value": "Stuttgart Hauptbahnhof"
+              }
+            },
+            {
+              "name": {
                 "value": "Styriastraße"
               }
             },
             {
               "name": {
                 "value": "Südtiroler Platz Kunsthaus"
+              }
+            },
+            {
+              "name": {
+                "value": "SZ St. Peter"
               }
             },
             {
@@ -8365,7 +8672,7 @@
             },
             {
               "name": {
-                "value": "Thalerhof Airbase One"
+                "value": "Thalerhof Frikusweg über Schwarzlsee"
               }
             },
             {
@@ -8480,7 +8787,27 @@
             },
             {
               "name": {
+                "value": "Unterpremstätten Busbahnhof"
+              }
+            },
+            {
+              "name": {
+                "value": "Unzmarkt"
+              }
+            },
+            {
+              "name": {
                 "value": "Urnenfriedhof"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasoldsberg via Hausmannstätten"
+              }
+            },
+            {
+              "name": {
+                "value": "Vasoldsberg via Raaba-Hausmannstätten"
               }
             },
             {
@@ -8501,6 +8828,11 @@
             {
               "name": {
                 "value": "Villa Sonnblick"
+              }
+            },
+            {
+              "name": {
+                "value": "Villach Hauptbahnhof"
               }
             },
             {
@@ -8660,12 +8992,17 @@
             },
             {
               "name": {
+                "value": "Weiz via Mitterdorf R."
+              }
+            },
+            {
+              "name": {
                 "value": "Werk Thondorf"
               }
             },
             {
               "name": {
-                "value": "Werndorf Bahnhof über Flughafen Graz"
+                "value": "Werndorf"
               }
             },
             {
@@ -8726,6 +9063,11 @@
             {
               "name": {
                 "value": "WIFI"
+              }
+            },
+            {
+              "name": {
+                "value": "Wildon Bahnhof via Fernitz-Allerheiligen"
               }
             },
             {
