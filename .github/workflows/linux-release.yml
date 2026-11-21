@@ -1,0 +1,121 @@
+# Builds the Linux tray app and publishes it as AppImage and .deb in a GitHub Release.
+# Trigger: push a tag like linux-v0.1.0  →  git tag linux-v0.1.0 && git push origin linux-v0.1.0
+#
+# Two stages, so a release is only published complete: first both architectures are tested, built and packed
+# (each on its own native runner); only when both succeeded, one job uploads everything into a draft release
+# and publishes it with the very last upload.
+name: Linux release
+
+on:
+  push:
+    tags: ['linux-v*']
+
+permissions:
+  contents: write   # create the release and upload the assets
+
+env:
+  VPK_VERSION: 1.2.161   # keep in sync with the Velopack package in TriasDeparture.Linux.csproj
+  REPO_URL: https://github.com/${{ github.repository }}
+
+jobs:
+  pack:
+    strategy:
+      matrix:
+        include:
+          - rid: linux-x64
+            runner: ubuntu-latest
+          - rid: linux-arm64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    env:
+      RID: ${{ matrix.rid }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Version from tag
+        run: echo "VERSION=${GITHUB_REF_NAME#linux-v}" >> "$GITHUB_ENV"
+
+      - name: Test
+        run: dotnet test linux/TriasDeparture.Linux.Tests -c Release
+
+      - name: Install vpk
+        run: dotnet tool install -g vpk --version "$VPK_VERSION"
+
+      # One Velopack channel per architecture; the installed app updates from the channel it came from
+      - name: Publish and pack
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          dotnet publish linux/TriasDeparture.Linux -c Release -r "$RID" --self-contained true \
+            -p:Version="$VERSION" -o "publish/$RID"
+
+          # The same build as .deb package (apt install / apt remove, no auto-update) – before vpk touches it
+          linux/packaging/build-deb.sh "$VERSION" "$RID" "publish/$RID"
+
+          # Previous release of this channel → delta updates (before anything of this version is uploaded)
+          vpk download github --repoUrl "$REPO_URL" --token "$GITHUB_TOKEN" --channel "$RID" -o "releases/$RID"
+
+          vpk pack --packId glei --packVersion "$VERSION" --packDir "publish/$RID" --mainExe glei \
+            --packTitle glei --packAuthors "Matthias Geisriegler" \
+            --icon linux/TriasDeparture.Linux/Assets/glei.png \
+            --runtime "$RID" --channel "$RID" -o "releases/$RID"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: releases-${{ matrix.rid }}
+          path: releases/${{ matrix.rid }}
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb-${{ matrix.rid }}
+          path: linux/packaging/out/glei_*.deb
+          if-no-files-found: error
+
+  release:
+    needs: pack   # runs only when every architecture was packed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Version from tag
+        run: echo "VERSION=${GITHUB_REF_NAME#linux-v}" >> "$GITHUB_ENV"
+
+      - name: Install vpk
+        run: dotnet tool install -g vpk --version "$VPK_VERSION"
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: releases-*
+          path: releases
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: deb-*
+          path: debs
+          merge-multiple: true
+
+      # Everything goes into a draft first; only the last upload publishes it. A failure on the way leaves a
+      # draft nobody sees (and no AppImage client updates to it) – delete it and push the tag again.
+      - name: Upload and publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          name="glei für Linux $VERSION"
+
+          vpk upload github --repoUrl "$REPO_URL" --token "$GITHUB_TOKEN" --channel linux-x64 -o releases/releases-linux-x64 \
+            --merge --releaseName "$name" --tag "$GITHUB_REF_NAME"
+
+          gh release upload "$GITHUB_REF_NAME" debs/glei_*.deb --clobber
+
+          vpk upload github --repoUrl "$REPO_URL" --token "$GITHUB_TOKEN" --channel linux-arm64 -o releases/releases-linux-arm64 \
+            --merge --publish --releaseName "$name" --tag "$GITHUB_REF_NAME"

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=glei
+GenericName=Abfahrten
+Comment=Live-Abfahrten für Bim und Bus in Graz
+Exec=glei
+Icon=glei
+Terminal=false
+StartupWMClass=glei
+Categories=Utility;
+Keywords=Bus;Bim;Straßenbahn;Abfahrt;Graz;

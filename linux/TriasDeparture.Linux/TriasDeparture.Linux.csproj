@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>glei</AssemblyName>
+    <RootNamespace>TriasDeparture.Linux</RootNamespace>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <Version>0.1.0</Version>
+    <Product>glei</Product>
+    <Company>Matthias Geisriegler</Company>
+  </PropertyGroup>
+
+  <!--
+    Platform-independent parts of the Windows app (API client, settings, departure logic, tray texts,
+    Velopack updates) are compiled in as linked files, so both apps behave the same and stay in sync.
+    They keep their TriasDeparture.Windows.* namespaces.
+  -->
+  <ItemGroup>
+    <Compile Include="..\..\windows\TriasDeparture.Windows\AppInfo.cs" Link="Shared\AppInfo.cs" />
+    <Compile Include="..\..\windows\TriasDeparture.Windows\UpdateService.cs" Link="Shared\UpdateService.cs" />
+    <Compile Include="..\..\windows\TriasDeparture.Windows\Data\GleiApiClient.cs" Link="Shared\Data\GleiApiClient.cs" />
+    <Compile Include="..\..\windows\TriasDeparture.Windows\Data\Settings.cs" Link="Shared\Data\Settings.cs" />
+    <Compile Include="..\..\windows\TriasDeparture.Windows\Departures\*.cs" LinkBase="Shared\Departures" />
+    <Compile Include="..\..\windows\TriasDeparture.Windows\Tray\TrayPresenter.cs" Link="Shared\Tray\TrayPresenter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="..\..\windows\TriasDeparture.Windows\Assets\glei.ico" Link="Assets\glei.ico" />
+    <!-- 256 px PNG from glei.ico: app-menu icon and AppImage icon -->
+    <AvaloniaResource Include="Assets\glei.png" />
+    <None Include="..\..\windows\TriasDeparture.Windows\appsettings.json" Link="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Linux-only app: Unix file modes, Unix sockets, … are fine everywhere in here -->
+    <AssemblyAttribute Include="System.Runtime.Versioning.SupportedOSPlatformAttribute">
+      <_Parameter1>linux</_Parameter1>
+    </AssemblyAttribute>
+    <InternalsVisibleTo Include="TriasDeparture.Linux.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\TriasDeparture.Domain\TriasDeparture.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="12.1.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.6" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.6" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="12.1.6" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Serilog" Version="4.3.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <!-- Same version as Avalonia.FreeDesktop uses for the tray, so both run on the version Avalonia was built against -->
+    <PackageReference Include="Tmds.DBus.Protocol" Version="0.94.1" />
+    <PackageReference Include="Velopack" Version="1.2.161" />
+  </ItemGroup>
+
+</Project>

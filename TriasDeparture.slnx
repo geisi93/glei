@@ -13,6 +13,10 @@
   <Folder Name="/api/">
     <Project Path="api/TriasDeparture.Api/TriasDeparture.Api.csproj" />
   </Folder>
+  <Folder Name="/linux/">
+    <Project Path="linux/TriasDeparture.Linux.Tests/TriasDeparture.Linux.Tests.csproj" />
+    <Project Path="linux/TriasDeparture.Linux/TriasDeparture.Linux.csproj" />
+  </Folder>
   <Folder Name="/windows/">
     <Project Path="windows/TriasDeparture.Windows.Tests/TriasDeparture.Windows.Tests.csproj" />
     <Project Path="windows/TriasDeparture.Windows/TriasDeparture.Windows.csproj" />

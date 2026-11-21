@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=glei
+Comment=Live-Abfahrten für Bim und Bus in Graz
+TryExec=/opt/glei/glei
+Exec=glei
+Icon=glei
+Terminal=false
+StartupWMClass=glei
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
