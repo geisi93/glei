@@ -255,6 +255,17 @@ public sealed class TriasXmlParserTests
         departures[1].OnwardStops.ShouldBeNull();
     }
 
+    [Theory]
+    [InlineData("2026-10-07T12:02:59Z", 2)] // like the stop displays: round down
+    [InlineData("2026-10-07T12:02:00Z", 2)]
+    [InlineData("2026-10-07T12:00:45Z", 0)] // under a minute = jetzt
+    public void ParseDepartures_RoundsMinutesDown(string estimated, int expected)
+    {
+        var xml = StopEventXml(StopEvent("2026-10-07T12:02:00Z", estimated));
+
+        _parser.ParseDepartures(xml, Now)[0].Minutes.ShouldBe(expected);
+    }
+
     [Fact]
     public void ParseDepartures_EmptyXml_ReturnsEmpty()
     {

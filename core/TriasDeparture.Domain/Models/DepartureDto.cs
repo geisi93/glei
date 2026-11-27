@@ -22,7 +22,10 @@ public record DepartureDto(
     [JsonIgnore]
     public DateTime EffectiveTime => EstimatedTime ?? PlannedTime;
 
-    /// <summary>Whole minutes from <paramref name="nowUtc"/> until departure (never negative).</summary>
+    /// <summary>
+    /// Whole minutes from <paramref name="nowUtc"/> until departure, rounded down (never negative) –
+    /// like the stop displays: 2 min 50 s left shows "2", under a minute shows "0" (jetzt).
+    /// </summary>
     public int MinutesUntilDeparture(DateTime nowUtc) =>
-        (int)Math.Max(0, Math.Round((EffectiveTime - nowUtc).TotalMinutes));
+        (int)Math.Max(0, Math.Floor((EffectiveTime - nowUtc).TotalMinutes));
 }

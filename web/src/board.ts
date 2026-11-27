@@ -14,7 +14,8 @@ export function upcoming(deps: Departure[], now: number): Departure[] {
 }
 
 export function minutesUntil(d: Departure, now: number): number {
-  return Math.max(0, Math.round((effectiveTime(d) - now) / 60_000));
+  // Rounded down like the stop displays: 2:50 left shows 2, under a minute shows jetzt.
+  return Math.max(0, Math.floor((effectiveTime(d) - now) / 60_000));
 }
 
 export interface LineGroup { key: string; line: string; mode: string | null; label: string; next: Departure[] }
