@@ -187,3 +187,22 @@ button { font: inherit; cursor: pointer; }
   .signs { display: none; }
   .d-row { grid-template-columns: 2.6ch 1fr auto; }
 }
+
+/* ── Carousel between saved monitors ───────────────────────────────────── */
+.post { touch-action: pan-y; user-select: none; transition: transform .2s ease-out; }
+.post.enter-right { animation: enter-right .25s ease-out; }
+.post.enter-left { animation: enter-left .25s ease-out; }
+@keyframes enter-right { from { transform: translateX(40px); opacity: 0; } }
+@keyframes enter-left { from { transform: translateX(-40px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .post, .post.enter-right, .post.enter-left { animation: none; transition: none; } }
+.carousel-dots { display: flex; gap: 4px; justify-content: center; margin-top: 14px; }
+.carousel-dots .dot {
+  width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer;
+  display: grid; place-items: center;
+}
+.carousel-dots .dot::after {
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, .3);
+  transition: background .2s, transform .2s;
+}
+.carousel-dots .dot.active::after { background: var(--led); transform: scale(1.25); }
+:fullscreen .carousel-dots { opacity: .4; }
